@@ -1,0 +1,543 @@
+name: 发布运行结果
+on:
+  push:
+    paths-ignore:
+      - "results/**"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 编译运行全部程序并保存输出
+        run: |
+          mkdir -p results
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e01_t1.txt
+          echo "\$ gcc -w -o prog code/e01_t1.c" >> results/e01_t1.txt
+          echo "\$ ./prog < inputs/e01_t1.txt" >> results/e01_t1.txt
+          if gcc -w -o prog code/e01_t1.c 2>>results/e01_t1.txt; then
+            timeout 60s ./prog < inputs/e01_t1.txt >> results/e01_t1.txt 2>&1 || echo "[运行异常退出]" >> results/e01_t1.txt
+          else
+            echo "[编译失败]" >> results/e01_t1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e01_t2.txt
+          echo "\$ gcc -w -o prog code/e01_t2.c" >> results/e01_t2.txt
+          echo "\$ ./prog < inputs/e01_t2.txt" >> results/e01_t2.txt
+          if gcc -w -o prog code/e01_t2.c 2>>results/e01_t2.txt; then
+            timeout 60s ./prog < inputs/e01_t2.txt >> results/e01_t2.txt 2>&1 || echo "[运行异常退出]" >> results/e01_t2.txt
+          else
+            echo "[编译失败]" >> results/e01_t2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e01_t3.txt
+          echo "\$ gcc -w -o prog code/e01_t3.c" >> results/e01_t3.txt
+          echo "\$ ./prog < inputs/e01_t3.txt" >> results/e01_t3.txt
+          if gcc -w -o prog code/e01_t3.c 2>>results/e01_t3.txt; then
+            timeout 60s ./prog < inputs/e01_t3.txt >> results/e01_t3.txt 2>&1 || echo "[运行异常退出]" >> results/e01_t3.txt
+          else
+            echo "[编译失败]" >> results/e01_t3.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e01_t4.txt
+          echo "\$ gcc -w -o prog code/e01_t4.c" >> results/e01_t4.txt
+          echo "\$ ./prog < inputs/e01_t4.txt" >> results/e01_t4.txt
+          if gcc -w -o prog code/e01_t4.c 2>>results/e01_t4.txt; then
+            timeout 60s ./prog < inputs/e01_t4.txt >> results/e01_t4.txt 2>&1 || echo "[运行异常退出]" >> results/e01_t4.txt
+          else
+            echo "[编译失败]" >> results/e01_t4.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e01_t5.txt
+          echo "\$ gcc -w -o prog code/e01_t5.c" >> results/e01_t5.txt
+          echo "\$ ./prog < inputs/e01_t5.txt" >> results/e01_t5.txt
+          if gcc -w -o prog code/e01_t5.c 2>>results/e01_t5.txt; then
+            timeout 60s ./prog < inputs/e01_t5.txt >> results/e01_t5.txt 2>&1 || echo "[运行异常退出]" >> results/e01_t5.txt
+          else
+            echo "[编译失败]" >> results/e01_t5.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e02.txt
+          echo "\$ gcc -w -o prog code/e02.c" >> results/e02.txt
+          echo "\$ ./prog < inputs/e02.txt" >> results/e02.txt
+          if gcc -w -o prog code/e02.c 2>>results/e02.txt; then
+            timeout 60s ./prog < inputs/e02.txt >> results/e02.txt 2>&1 || echo "[运行异常退出]" >> results/e02.txt
+          else
+            echo "[编译失败]" >> results/e02.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e03.txt
+          echo "\$ gcc -w -o prog code/e03.c" >> results/e03.txt
+          echo "\$ ./prog < inputs/e03.txt" >> results/e03.txt
+          if gcc -w -o prog code/e03.c 2>>results/e03.txt; then
+            timeout 60s ./prog < inputs/e03.txt >> results/e03.txt 2>&1 || echo "[运行异常退出]" >> results/e03.txt
+          else
+            echo "[编译失败]" >> results/e03.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e04_p1.txt
+          echo "\$ gcc -w -o prog code/e04_p1.c" >> results/e04_p1.txt
+          echo "\$ ./prog < inputs/e04_p1.txt" >> results/e04_p1.txt
+          if gcc -w -o prog code/e04_p1.c 2>>results/e04_p1.txt; then
+            timeout 60s ./prog < inputs/e04_p1.txt >> results/e04_p1.txt 2>&1 || echo "[运行异常退出]" >> results/e04_p1.txt
+          else
+            echo "[编译失败]" >> results/e04_p1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e04_p2.txt
+          echo "\$ gcc -w -o prog code/e04_p2.c" >> results/e04_p2.txt
+          echo "\$ ./prog < inputs/e04_p2.txt" >> results/e04_p2.txt
+          if gcc -w -o prog code/e04_p2.c 2>>results/e04_p2.txt; then
+            timeout 60s ./prog < inputs/e04_p2.txt >> results/e04_p2.txt 2>&1 || echo "[运行异常退出]" >> results/e04_p2.txt
+          else
+            echo "[编译失败]" >> results/e04_p2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e04_p3.txt
+          echo "\$ gcc -w -o prog code/e04_p3.c" >> results/e04_p3.txt
+          echo "\$ ./prog < inputs/e04_p3.txt" >> results/e04_p3.txt
+          if gcc -w -o prog code/e04_p3.c 2>>results/e04_p3.txt; then
+            timeout 60s ./prog < inputs/e04_p3.txt >> results/e04_p3.txt 2>&1 || echo "[运行异常退出]" >> results/e04_p3.txt
+          else
+            echo "[编译失败]" >> results/e04_p3.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e04_p4.txt
+          echo "\$ gcc -w -o prog code/e04_p4.c" >> results/e04_p4.txt
+          echo "\$ ./prog < inputs/e04_p4.txt" >> results/e04_p4.txt
+          if gcc -w -o prog code/e04_p4.c 2>>results/e04_p4.txt; then
+            timeout 60s ./prog < inputs/e04_p4.txt >> results/e04_p4.txt 2>&1 || echo "[运行异常退出]" >> results/e04_p4.txt
+          else
+            echo "[编译失败]" >> results/e04_p4.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e05.txt
+          echo "\$ gcc -w -o prog code/e05.c" >> results/e05.txt
+          echo "\$ ./prog < inputs/e05.txt" >> results/e05.txt
+          if gcc -w -o prog code/e05.c 2>>results/e05.txt; then
+            timeout 60s ./prog < inputs/e05.txt >> results/e05.txt 2>&1 || echo "[运行异常退出]" >> results/e05.txt
+          else
+            echo "[编译失败]" >> results/e05.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e06_s1.txt
+          echo "\$ gcc -w -o prog code/e06_s1.c" >> results/e06_s1.txt
+          echo "\$ ./prog < inputs/e06_s1.txt" >> results/e06_s1.txt
+          if gcc -w -o prog code/e06_s1.c 2>>results/e06_s1.txt; then
+            timeout 60s ./prog < inputs/e06_s1.txt >> results/e06_s1.txt 2>&1 || echo "[运行异常退出]" >> results/e06_s1.txt
+          else
+            echo "[编译失败]" >> results/e06_s1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e06_s2.txt
+          echo "\$ gcc -w -o prog code/e06_s2.c" >> results/e06_s2.txt
+          echo "\$ ./prog < inputs/e06_s2.txt" >> results/e06_s2.txt
+          if gcc -w -o prog code/e06_s2.c 2>>results/e06_s2.txt; then
+            timeout 60s ./prog < inputs/e06_s2.txt >> results/e06_s2.txt 2>&1 || echo "[运行异常退出]" >> results/e06_s2.txt
+          else
+            echo "[编译失败]" >> results/e06_s2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e06_s3.txt
+          echo "\$ gcc -w -o prog code/e06_s3.c" >> results/e06_s3.txt
+          echo "\$ ./prog < inputs/e06_s3.txt" >> results/e06_s3.txt
+          if gcc -w -o prog code/e06_s3.c 2>>results/e06_s3.txt; then
+            timeout 60s ./prog < inputs/e06_s3.txt >> results/e06_s3.txt 2>&1 || echo "[运行异常退出]" >> results/e06_s3.txt
+          else
+            echo "[编译失败]" >> results/e06_s3.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e06_s4.txt
+          echo "\$ gcc -w -o prog code/e06_s4.c" >> results/e06_s4.txt
+          echo "\$ ./prog < inputs/e06_s4.txt" >> results/e06_s4.txt
+          if gcc -w -o prog code/e06_s4.c 2>>results/e06_s4.txt; then
+            timeout 60s ./prog < inputs/e06_s4.txt >> results/e06_s4.txt 2>&1 || echo "[运行异常退出]" >> results/e06_s4.txt
+          else
+            echo "[编译失败]" >> results/e06_s4.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e06_s5.txt
+          echo "\$ gcc -w -o prog code/e06_s5.c" >> results/e06_s5.txt
+          echo "\$ ./prog < inputs/e06_s5.txt" >> results/e06_s5.txt
+          if gcc -w -o prog code/e06_s5.c 2>>results/e06_s5.txt; then
+            timeout 60s ./prog < inputs/e06_s5.txt >> results/e06_s5.txt 2>&1 || echo "[运行异常退出]" >> results/e06_s5.txt
+          else
+            echo "[编译失败]" >> results/e06_s5.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e06_s6.txt
+          echo "\$ gcc -w -o prog code/e06_s6.c" >> results/e06_s6.txt
+          echo "\$ ./prog < inputs/e06_s6.txt" >> results/e06_s6.txt
+          if gcc -w -o prog code/e06_s6.c 2>>results/e06_s6.txt; then
+            timeout 60s ./prog < inputs/e06_s6.txt >> results/e06_s6.txt 2>&1 || echo "[运行异常退出]" >> results/e06_s6.txt
+          else
+            echo "[编译失败]" >> results/e06_s6.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e06_s7.txt
+          echo "\$ gcc -w -o prog code/e06_s7.c" >> results/e06_s7.txt
+          echo "\$ ./prog < inputs/e06_s7.txt" >> results/e06_s7.txt
+          if gcc -w -o prog code/e06_s7.c 2>>results/e06_s7.txt; then
+            timeout 60s ./prog < inputs/e06_s7.txt >> results/e06_s7.txt 2>&1 || echo "[运行异常退出]" >> results/e06_s7.txt
+          else
+            echo "[编译失败]" >> results/e06_s7.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e06_s8.txt
+          echo "\$ gcc -w -o prog code/e06_s8.c" >> results/e06_s8.txt
+          echo "\$ ./prog < inputs/e06_s8.txt" >> results/e06_s8.txt
+          if gcc -w -o prog code/e06_s8.c 2>>results/e06_s8.txt; then
+            timeout 60s ./prog < inputs/e06_s8.txt >> results/e06_s8.txt 2>&1 || echo "[运行异常退出]" >> results/e06_s8.txt
+          else
+            echo "[编译失败]" >> results/e06_s8.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e07_t1.txt
+          echo "\$ gcc -w -o prog code/e07_t1.c" >> results/e07_t1.txt
+          echo "\$ ./prog < inputs/e07_t1.txt" >> results/e07_t1.txt
+          if gcc -w -o prog code/e07_t1.c 2>>results/e07_t1.txt; then
+            timeout 60s ./prog < inputs/e07_t1.txt >> results/e07_t1.txt 2>&1 || echo "[运行异常退出]" >> results/e07_t1.txt
+          else
+            echo "[编译失败]" >> results/e07_t1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e07_t2.txt
+          echo "\$ gcc -w -o prog code/e07_t2.c" >> results/e07_t2.txt
+          echo "\$ ./prog < inputs/e07_t2.txt" >> results/e07_t2.txt
+          if gcc -w -o prog code/e07_t2.c 2>>results/e07_t2.txt; then
+            timeout 60s ./prog < inputs/e07_t2.txt >> results/e07_t2.txt 2>&1 || echo "[运行异常退出]" >> results/e07_t2.txt
+          else
+            echo "[编译失败]" >> results/e07_t2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e07_t3.txt
+          echo "\$ gcc -w -o prog code/e07_t3.c" >> results/e07_t3.txt
+          echo "\$ ./prog < inputs/e07_t3.txt" >> results/e07_t3.txt
+          if gcc -w -o prog code/e07_t3.c 2>>results/e07_t3.txt; then
+            timeout 60s ./prog < inputs/e07_t3.txt >> results/e07_t3.txt 2>&1 || echo "[运行异常退出]" >> results/e07_t3.txt
+          else
+            echo "[编译失败]" >> results/e07_t3.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e07_t4.txt
+          echo "\$ gcc -w -o prog code/e07_t4.c" >> results/e07_t4.txt
+          echo "\$ ./prog < inputs/e07_t4.txt" >> results/e07_t4.txt
+          if gcc -w -o prog code/e07_t4.c 2>>results/e07_t4.txt; then
+            timeout 60s ./prog < inputs/e07_t4.txt >> results/e07_t4.txt 2>&1 || echo "[运行异常退出]" >> results/e07_t4.txt
+          else
+            echo "[编译失败]" >> results/e07_t4.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e07_t5.txt
+          echo "\$ gcc -w -o prog code/e07_t5.c" >> results/e07_t5.txt
+          echo "\$ ./prog < inputs/e07_t5.txt" >> results/e07_t5.txt
+          if gcc -w -o prog code/e07_t5.c 2>>results/e07_t5.txt; then
+            timeout 60s ./prog < inputs/e07_t5.txt >> results/e07_t5.txt 2>&1 || echo "[运行异常退出]" >> results/e07_t5.txt
+          else
+            echo "[编译失败]" >> results/e07_t5.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e08.txt
+          echo "\$ gcc -w -o prog code/e08.c" >> results/e08.txt
+          echo "\$ ./prog < inputs/e08.txt" >> results/e08.txt
+          if gcc -w -o prog code/e08.c 2>>results/e08.txt; then
+            timeout 60s ./prog < inputs/e08.txt >> results/e08.txt 2>&1 || echo "[运行异常退出]" >> results/e08.txt
+          else
+            echo "[编译失败]" >> results/e08.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e09_s1.txt
+          echo "\$ gcc -w -o prog code/e09_s1.c" >> results/e09_s1.txt
+          echo "\$ ./prog < inputs/e09_s1.txt" >> results/e09_s1.txt
+          if gcc -w -o prog code/e09_s1.c 2>>results/e09_s1.txt; then
+            timeout 60s ./prog < inputs/e09_s1.txt >> results/e09_s1.txt 2>&1 || echo "[运行异常退出]" >> results/e09_s1.txt
+          else
+            echo "[编译失败]" >> results/e09_s1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e09_s2.txt
+          echo "\$ gcc -w -o prog code/e09_s2.c" >> results/e09_s2.txt
+          echo "\$ ./prog < inputs/e09_s2.txt" >> results/e09_s2.txt
+          if gcc -w -o prog code/e09_s2.c 2>>results/e09_s2.txt; then
+            timeout 60s ./prog < inputs/e09_s2.txt >> results/e09_s2.txt 2>&1 || echo "[运行异常退出]" >> results/e09_s2.txt
+          else
+            echo "[编译失败]" >> results/e09_s2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e09_s3.txt
+          echo "\$ gcc -w -o prog code/e09_s3.c" >> results/e09_s3.txt
+          echo "\$ ./prog < inputs/e09_s3.txt" >> results/e09_s3.txt
+          if gcc -w -o prog code/e09_s3.c 2>>results/e09_s3.txt; then
+            timeout 60s ./prog < inputs/e09_s3.txt >> results/e09_s3.txt 2>&1 || echo "[运行异常退出]" >> results/e09_s3.txt
+          else
+            echo "[编译失败]" >> results/e09_s3.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e10.txt
+          echo "\$ gcc -w -o prog code/e10.c" >> results/e10.txt
+          echo "\$ ./prog < inputs/e10.txt" >> results/e10.txt
+          if gcc -w -o prog code/e10.c 2>>results/e10.txt; then
+            timeout 60s ./prog < inputs/e10.txt >> results/e10.txt 2>&1 || echo "[运行异常退出]" >> results/e10.txt
+          else
+            echo "[编译失败]" >> results/e10.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e11.txt
+          echo "\$ gcc -w -o prog code/e11.c" >> results/e11.txt
+          echo "\$ ./prog < inputs/e11.txt" >> results/e11.txt
+          if gcc -w -o prog code/e11.c 2>>results/e11.txt; then
+            timeout 60s ./prog < inputs/e11.txt >> results/e11.txt 2>&1 || echo "[运行异常退出]" >> results/e11.txt
+          else
+            echo "[编译失败]" >> results/e11.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e12_s1.txt
+          echo "\$ gcc -w -o prog code/e12_s1.c" >> results/e12_s1.txt
+          echo "\$ ./prog < inputs/e12_s1.txt" >> results/e12_s1.txt
+          if gcc -w -o prog code/e12_s1.c 2>>results/e12_s1.txt; then
+            timeout 60s ./prog < inputs/e12_s1.txt >> results/e12_s1.txt 2>&1 || echo "[运行异常退出]" >> results/e12_s1.txt
+          else
+            echo "[编译失败]" >> results/e12_s1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e12_s2.txt
+          echo "\$ gcc -w -o prog code/e12_s2.c" >> results/e12_s2.txt
+          echo "\$ ./prog < inputs/e12_s2.txt" >> results/e12_s2.txt
+          if gcc -w -o prog code/e12_s2.c 2>>results/e12_s2.txt; then
+            timeout 60s ./prog < inputs/e12_s2.txt >> results/e12_s2.txt 2>&1 || echo "[运行异常退出]" >> results/e12_s2.txt
+          else
+            echo "[编译失败]" >> results/e12_s2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e12_s3.txt
+          echo "\$ gcc -w -o prog code/e12_s3.c" >> results/e12_s3.txt
+          echo "\$ ./prog < inputs/e12_s3.txt" >> results/e12_s3.txt
+          if gcc -w -o prog code/e12_s3.c 2>>results/e12_s3.txt; then
+            timeout 60s ./prog < inputs/e12_s3.txt >> results/e12_s3.txt 2>&1 || echo "[运行异常退出]" >> results/e12_s3.txt
+          else
+            echo "[编译失败]" >> results/e12_s3.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e12_s4.txt
+          echo "\$ gcc -w -o prog code/e12_s4.c" >> results/e12_s4.txt
+          echo "\$ ./prog < inputs/e12_s4.txt" >> results/e12_s4.txt
+          if gcc -w -o prog code/e12_s4.c 2>>results/e12_s4.txt; then
+            timeout 60s ./prog < inputs/e12_s4.txt >> results/e12_s4.txt 2>&1 || echo "[运行异常退出]" >> results/e12_s4.txt
+          else
+            echo "[编译失败]" >> results/e12_s4.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e12_s5.txt
+          echo "\$ gcc -w -o prog code/e12_s5.c" >> results/e12_s5.txt
+          echo "\$ ./prog < inputs/e12_s5.txt" >> results/e12_s5.txt
+          if gcc -w -o prog code/e12_s5.c 2>>results/e12_s5.txt; then
+            timeout 60s ./prog < inputs/e12_s5.txt >> results/e12_s5.txt 2>&1 || echo "[运行异常退出]" >> results/e12_s5.txt
+          else
+            echo "[编译失败]" >> results/e12_s5.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e12_s6.txt
+          echo "\$ gcc -w -o prog code/e12_s6.c" >> results/e12_s6.txt
+          echo "\$ ./prog < inputs/e12_s6.txt" >> results/e12_s6.txt
+          if gcc -w -o prog code/e12_s6.c 2>>results/e12_s6.txt; then
+            timeout 60s ./prog < inputs/e12_s6.txt >> results/e12_s6.txt 2>&1 || echo "[运行异常退出]" >> results/e12_s6.txt
+          else
+            echo "[编译失败]" >> results/e12_s6.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e12_s7.txt
+          echo "\$ gcc -w -o prog code/e12_s7.c" >> results/e12_s7.txt
+          echo "\$ ./prog < inputs/e12_s7.txt" >> results/e12_s7.txt
+          if gcc -w -o prog code/e12_s7.c 2>>results/e12_s7.txt; then
+            timeout 60s ./prog < inputs/e12_s7.txt >> results/e12_s7.txt 2>&1 || echo "[运行异常退出]" >> results/e12_s7.txt
+          else
+            echo "[编译失败]" >> results/e12_s7.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e13_p1.txt
+          echo "\$ gcc -w -o prog code/e13_p1.c" >> results/e13_p1.txt
+          echo "\$ ./prog < inputs/e13_p1.txt" >> results/e13_p1.txt
+          if gcc -w -o prog code/e13_p1.c 2>>results/e13_p1.txt; then
+            timeout 60s ./prog < inputs/e13_p1.txt >> results/e13_p1.txt 2>&1 || echo "[运行异常退出]" >> results/e13_p1.txt
+          else
+            echo "[编译失败]" >> results/e13_p1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e13_p2.txt
+          echo "\$ gcc -w -o prog code/e13_p2.c" >> results/e13_p2.txt
+          echo "\$ ./prog < inputs/e13_p2.txt" >> results/e13_p2.txt
+          if gcc -w -o prog code/e13_p2.c 2>>results/e13_p2.txt; then
+            timeout 60s ./prog < inputs/e13_p2.txt >> results/e13_p2.txt 2>&1 || echo "[运行异常退出]" >> results/e13_p2.txt
+          else
+            echo "[编译失败]" >> results/e13_p2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e14_p1.txt
+          echo "\$ gcc -w -o prog code/e14_p1.c" >> results/e14_p1.txt
+          echo "\$ ./prog < inputs/e14_p1.txt" >> results/e14_p1.txt
+          if gcc -w -o prog code/e14_p1.c 2>>results/e14_p1.txt; then
+            timeout 60s ./prog < inputs/e14_p1.txt >> results/e14_p1.txt 2>&1 || echo "[运行异常退出]" >> results/e14_p1.txt
+          else
+            echo "[编译失败]" >> results/e14_p1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e14_p2.txt
+          echo "\$ gcc -w -o prog code/e14_p2.c" >> results/e14_p2.txt
+          echo "\$ ./prog < inputs/e14_p2.txt" >> results/e14_p2.txt
+          if gcc -w -o prog code/e14_p2.c 2>>results/e14_p2.txt; then
+            timeout 60s ./prog < inputs/e14_p2.txt >> results/e14_p2.txt 2>&1 || echo "[运行异常退出]" >> results/e14_p2.txt
+          else
+            echo "[编译失败]" >> results/e14_p2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e15.txt
+          echo "\$ gcc -w -o prog code/e15.c" >> results/e15.txt
+          echo "\$ ./prog < inputs/e15.txt" >> results/e15.txt
+          if gcc -w -o prog code/e15.c 2>>results/e15.txt; then
+            timeout 60s ./prog < inputs/e15.txt >> results/e15.txt 2>&1 || echo "[运行异常退出]" >> results/e15.txt
+          else
+            echo "[编译失败]" >> results/e15.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e16.txt
+          echo "\$ gcc -w -o prog code/e16.c" >> results/e16.txt
+          echo "\$ ./prog < inputs/e16.txt" >> results/e16.txt
+          if gcc -w -o prog code/e16.c 2>>results/e16.txt; then
+            timeout 60s ./prog < inputs/e16.txt >> results/e16.txt 2>&1 || echo "[运行异常退出]" >> results/e16.txt
+          else
+            echo "[编译失败]" >> results/e16.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e17_p1.txt
+          echo "\$ gcc -w -o prog code/e17_p1.c" >> results/e17_p1.txt
+          echo "\$ ./prog < inputs/e17_p1.txt" >> results/e17_p1.txt
+          if gcc -w -o prog code/e17_p1.c 2>>results/e17_p1.txt; then
+            timeout 60s ./prog < inputs/e17_p1.txt >> results/e17_p1.txt 2>&1 || echo "[运行异常退出]" >> results/e17_p1.txt
+          else
+            echo "[编译失败]" >> results/e17_p1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e17_p2.txt
+          echo "\$ gcc -w -o prog code/e17_p2.c" >> results/e17_p2.txt
+          echo "\$ ./prog < inputs/e17_p2.txt" >> results/e17_p2.txt
+          if gcc -w -o prog code/e17_p2.c 2>>results/e17_p2.txt; then
+            timeout 60s ./prog < inputs/e17_p2.txt >> results/e17_p2.txt 2>&1 || echo "[运行异常退出]" >> results/e17_p2.txt
+          else
+            echo "[编译失败]" >> results/e17_p2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e18_r1.txt
+          echo "\$ gcc -w -o prog code/e18.c" >> results/e18_r1.txt
+          echo "\$ ./prog < inputs/e18_r1.txt" >> results/e18_r1.txt
+          if gcc -w -o prog code/e18.c 2>>results/e18_r1.txt; then
+            timeout 60s ./prog < inputs/e18_r1.txt >> results/e18_r1.txt 2>&1 || echo "[运行异常退出]" >> results/e18_r1.txt
+          else
+            echo "[编译失败]" >> results/e18_r1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e18_r2.txt
+          echo "\$ gcc -w -o prog code/e18.c" >> results/e18_r2.txt
+          echo "\$ ./prog < inputs/e18_r2.txt" >> results/e18_r2.txt
+          if gcc -w -o prog code/e18.c 2>>results/e18_r2.txt; then
+            timeout 60s ./prog < inputs/e18_r2.txt >> results/e18_r2.txt 2>&1 || echo "[运行异常退出]" >> results/e18_r2.txt
+          else
+            echo "[编译失败]" >> results/e18_r2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e18_r3.txt
+          echo "\$ gcc -w -o prog code/e18.c" >> results/e18_r3.txt
+          echo "\$ ./prog < inputs/e18_r3.txt" >> results/e18_r3.txt
+          if gcc -w -o prog code/e18.c 2>>results/e18_r3.txt; then
+            timeout 60s ./prog < inputs/e18_r3.txt >> results/e18_r3.txt 2>&1 || echo "[运行异常退出]" >> results/e18_r3.txt
+          else
+            echo "[编译失败]" >> results/e18_r3.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e18_r4.txt
+          echo "\$ gcc -w -o prog code/e18.c" >> results/e18_r4.txt
+          echo "\$ ./prog < inputs/e18_r4.txt" >> results/e18_r4.txt
+          if gcc -w -o prog code/e18.c 2>>results/e18_r4.txt; then
+            timeout 60s ./prog < inputs/e18_r4.txt >> results/e18_r4.txt 2>&1 || echo "[运行异常退出]" >> results/e18_r4.txt
+          else
+            echo "[编译失败]" >> results/e18_r4.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e18_r5.txt
+          echo "\$ gcc -w -o prog code/e18.c" >> results/e18_r5.txt
+          echo "\$ ./prog < inputs/e18_r5.txt" >> results/e18_r5.txt
+          if gcc -w -o prog code/e18.c 2>>results/e18_r5.txt; then
+            timeout 60s ./prog < inputs/e18_r5.txt >> results/e18_r5.txt 2>&1 || echo "[运行异常退出]" >> results/e18_r5.txt
+          else
+            echo "[编译失败]" >> results/e18_r5.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_avl1.txt
+          echo "\$ gcc -w -o prog code/e19_avl1.c" >> results/e19_avl1.txt
+          echo "\$ ./prog < inputs/e19_avl1.txt" >> results/e19_avl1.txt
+          if gcc -w -o prog code/e19_avl1.c 2>>results/e19_avl1.txt; then
+            timeout 60s ./prog < inputs/e19_avl1.txt >> results/e19_avl1.txt 2>&1 || echo "[运行异常退出]" >> results/e19_avl1.txt
+          else
+            echo "[编译失败]" >> results/e19_avl1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_avl2.txt
+          echo "\$ gcc -w -o prog code/e19_avl2.c" >> results/e19_avl2.txt
+          echo "\$ ./prog < inputs/e19_avl2.txt" >> results/e19_avl2.txt
+          if gcc -w -o prog code/e19_avl2.c 2>>results/e19_avl2.txt; then
+            timeout 60s ./prog < inputs/e19_avl2.txt >> results/e19_avl2.txt 2>&1 || echo "[运行异常退出]" >> results/e19_avl2.txt
+          else
+            echo "[编译失败]" >> results/e19_avl2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_bin1.txt
+          echo "\$ gcc -w -o prog code/e19_bin1.c" >> results/e19_bin1.txt
+          echo "\$ ./prog < inputs/e19_bin1.txt" >> results/e19_bin1.txt
+          if gcc -w -o prog code/e19_bin1.c 2>>results/e19_bin1.txt; then
+            timeout 60s ./prog < inputs/e19_bin1.txt >> results/e19_bin1.txt 2>&1 || echo "[运行异常退出]" >> results/e19_bin1.txt
+          else
+            echo "[编译失败]" >> results/e19_bin1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_bin2.txt
+          echo "\$ gcc -w -o prog code/e19_bin2.c" >> results/e19_bin2.txt
+          echo "\$ ./prog < inputs/e19_bin2.txt" >> results/e19_bin2.txt
+          if gcc -w -o prog code/e19_bin2.c 2>>results/e19_bin2.txt; then
+            timeout 60s ./prog < inputs/e19_bin2.txt >> results/e19_bin2.txt 2>&1 || echo "[运行异常退出]" >> results/e19_bin2.txt
+          else
+            echo "[编译失败]" >> results/e19_bin2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_blk1.txt
+          echo "\$ gcc -w -o prog code/e19_blk1.c" >> results/e19_blk1.txt
+          echo "\$ ./prog < inputs/e19_blk1.txt" >> results/e19_blk1.txt
+          if gcc -w -o prog code/e19_blk1.c 2>>results/e19_blk1.txt; then
+            timeout 60s ./prog < inputs/e19_blk1.txt >> results/e19_blk1.txt 2>&1 || echo "[运行异常退出]" >> results/e19_blk1.txt
+          else
+            echo "[编译失败]" >> results/e19_blk1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_blk2.txt
+          echo "\$ gcc -w -o prog code/e19_blk2.c" >> results/e19_blk2.txt
+          echo "\$ ./prog < inputs/e19_blk2.txt" >> results/e19_blk2.txt
+          if gcc -w -o prog code/e19_blk2.c 2>>results/e19_blk2.txt; then
+            timeout 60s ./prog < inputs/e19_blk2.txt >> results/e19_blk2.txt 2>&1 || echo "[运行异常退出]" >> results/e19_blk2.txt
+          else
+            echo "[编译失败]" >> results/e19_blk2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_bpt1.txt
+          echo "\$ gcc -w -o prog code/e19_bpt1.c" >> results/e19_bpt1.txt
+          echo "\$ ./prog < inputs/e19_bpt1.txt" >> results/e19_bpt1.txt
+          if gcc -w -o prog code/e19_bpt1.c 2>>results/e19_bpt1.txt; then
+            timeout 60s ./prog < inputs/e19_bpt1.txt >> results/e19_bpt1.txt 2>&1 || echo "[运行异常退出]" >> results/e19_bpt1.txt
+          else
+            echo "[编译失败]" >> results/e19_bpt1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_bpt2.txt
+          echo "\$ gcc -w -o prog code/e19_bpt2.c" >> results/e19_bpt2.txt
+          echo "\$ ./prog < inputs/e19_bpt2.txt" >> results/e19_bpt2.txt
+          if gcc -w -o prog code/e19_bpt2.c 2>>results/e19_bpt2.txt; then
+            timeout 60s ./prog < inputs/e19_bpt2.txt >> results/e19_bpt2.txt 2>&1 || echo "[运行异常退出]" >> results/e19_bpt2.txt
+          else
+            echo "[编译失败]" >> results/e19_bpt2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_bst1.txt
+          echo "\$ gcc -w -o prog code/e19_bst1.c" >> results/e19_bst1.txt
+          echo "\$ ./prog < inputs/e19_bst1.txt" >> results/e19_bst1.txt
+          if gcc -w -o prog code/e19_bst1.c 2>>results/e19_bst1.txt; then
+            timeout 60s ./prog < inputs/e19_bst1.txt >> results/e19_bst1.txt 2>&1 || echo "[运行异常退出]" >> results/e19_bst1.txt
+          else
+            echo "[编译失败]" >> results/e19_bst1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_bst2.txt
+          echo "\$ gcc -w -o prog code/e19_bst2.c" >> results/e19_bst2.txt
+          echo "\$ ./prog < inputs/e19_bst2.txt" >> results/e19_bst2.txt
+          if gcc -w -o prog code/e19_bst2.c 2>>results/e19_bst2.txt; then
+            timeout 60s ./prog < inputs/e19_bst2.txt >> results/e19_bst2.txt 2>&1 || echo "[运行异常退出]" >> results/e19_bst2.txt
+          else
+            echo "[编译失败]" >> results/e19_bst2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_bt1.txt
+          echo "\$ gcc -w -o prog code/e19_bt1.c" >> results/e19_bt1.txt
+          echo "\$ ./prog < inputs/e19_bt1.txt" >> results/e19_bt1.txt
+          if gcc -w -o prog code/e19_bt1.c 2>>results/e19_bt1.txt; then
+            timeout 60s ./prog < inputs/e19_bt1.txt >> results/e19_bt1.txt 2>&1 || echo "[运行异常退出]" >> results/e19_bt1.txt
+          else
+            echo "[编译失败]" >> results/e19_bt1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_bt2.txt
+          echo "\$ gcc -w -o prog code/e19_bt2.c" >> results/e19_bt2.txt
+          echo "\$ ./prog < inputs/e19_bt2.txt" >> results/e19_bt2.txt
+          if gcc -w -o prog code/e19_bt2.c 2>>results/e19_bt2.txt; then
+            timeout 60s ./prog < inputs/e19_bt2.txt >> results/e19_bt2.txt 2>&1 || echo "[运行异常退出]" >> results/e19_bt2.txt
+          else
+            echo "[编译失败]" >> results/e19_bt2.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_seq1.txt
+          echo "\$ gcc -w -o prog code/e19_seq1.c" >> results/e19_seq1.txt
+          echo "\$ ./prog < inputs/e19_seq1.txt" >> results/e19_seq1.txt
+          if gcc -w -o prog code/e19_seq1.c 2>>results/e19_seq1.txt; then
+            timeout 60s ./prog < inputs/e19_seq1.txt >> results/e19_seq1.txt 2>&1 || echo "[运行异常退出]" >> results/e19_seq1.txt
+          else
+            echo "[编译失败]" >> results/e19_seq1.txt
+          fi
+          echo "# GitHub Actions 云端运行 · 运行编号 $GITHUB_RUN_NUMBER · ubuntu-latest" > results/e19_seq2.txt
+          echo "\$ gcc -w -o prog code/e19_seq2.c" >> results/e19_seq2.txt
+          echo "\$ ./prog < inputs/e19_seq2.txt" >> results/e19_seq2.txt
+          if gcc -w -o prog code/e19_seq2.c 2>>results/e19_seq2.txt; then
+            timeout 60s ./prog < inputs/e19_seq2.txt >> results/e19_seq2.txt 2>&1 || echo "[运行异常退出]" >> results/e19_seq2.txt
+          else
+            echo "[编译失败]" >> results/e19_seq2.txt
+          fi
+      - name: 提交结果到 results 目录
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results
+          git diff --cached --quiet || git commit -m "保存 65 个程序的云端运行结果 [skip ci]"
+          git push

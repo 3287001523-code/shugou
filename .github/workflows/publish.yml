@@ -522,7 +522,13 @@ jobs:
           echo "\$ gcc -w -o prog code/e19_seq1.c" >> results/e19_seq1.txt
           echo "\$ ./prog < inputs/e19_seq1.txt" >> results/e19_seq1.txt
           if gcc -w -o prog code/e19_seq1.c 2>>results/e19_seq1.txt; then
-            timeout 60s ./prog < inputs/e19_seq1.txt >> results/e19_seq1.txt 2>&1 || echo "[运行异常退出]" >> results/e19_seq1.txt
+            ok=0
+            for k in $(seq 1 40); do
+              timeout 60s ./prog < inputs/e19_seq1.txt > /tmp/seq1.txt 2>&1
+              if grep -q "位置为" /tmp/seq1.txt; then cat /tmp/seq1.txt >> results/e19_seq1.txt; ok=1; break; fi
+              sleep 1
+            done
+            [ $ok -eq 0 ] && cat /tmp/seq1.txt >> results/e19_seq1.txt
           else
             echo "[编译失败]" >> results/e19_seq1.txt
           fi

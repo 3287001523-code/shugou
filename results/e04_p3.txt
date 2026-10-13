@@ -1,4 +1,4 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e04_p3.c
 $ ./prog < inputs/e04_p3.txt
 请输入非递减有序的La 的元素,输入-1 结束:

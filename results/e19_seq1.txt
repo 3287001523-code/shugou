@@ -1,5 +1,5 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e19_seq1.c
 $ ./prog < inputs/e19_seq1.txt
-生成的数组: 0 65 45 52 23 79 60 62 29 73 65 27 85 57 53 64 92 79 2 93 
-请输入要查找的元素: 元素 16 未找到
+生成的数组: 52 4 28 16 51 47 77 38 47 50 45 95 60 67 23 32 33 10 5 68 
+请输入要查找的元素: 元素 16 找到，位置为 3

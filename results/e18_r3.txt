@@ -1,4 +1,4 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e18.c
 $ ./prog < inputs/e18_r3.txt
 请输入待排序序列的个数:

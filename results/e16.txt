@@ -1,4 +1,4 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e16.c
 $ ./prog < inputs/e16.txt
 请输入关键字的值,以0 结束:中序遍历建立的二叉排序树的序列为:12 24 37 45 53 90 

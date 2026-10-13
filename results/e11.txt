@@ -1,4 +1,4 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e11.c
 $ ./prog < inputs/e11.txt
 请按先序次序输入二叉树结点(空结点用#表示):

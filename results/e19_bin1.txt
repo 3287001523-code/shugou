@@ -1,4 +1,4 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e19_bin1.c
 $ ./prog < inputs/e19_bin1.txt
 有序数组: 2 5 8 12 16 23 38 45 56 72 

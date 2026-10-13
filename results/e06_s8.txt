@@ -1,4 +1,4 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e06_s8.c
 $ ./prog < inputs/e06_s8.txt
 输入元素,以-1 结束:现在元素和其访问的频度(按递减的顺序输出)为:

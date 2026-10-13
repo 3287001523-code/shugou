@@ -1,4 +1,4 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e06_s2.c
 $ ./prog < inputs/e06_s2.txt
 请输入链表中的结点,以-1 结束

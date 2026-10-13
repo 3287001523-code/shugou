@@ -1,4 +1,4 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e09_s2.c
 $ ./prog < inputs/e09_s2.txt
 请输入中序表达式(数字限单位数,如 2*(6-4)+8/4):

@@ -1,4 +1,4 @@
-# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+# GitHub Actions 云端运行 · 运行编号 2 · ubuntu-latest
 $ gcc -w -o prog code/e04_p4.c
 $ ./prog < inputs/e04_p4.txt
 请输入约瑟夫环中的元素个数N 和K :3 6 9 2 7 1 8 5 10 4 

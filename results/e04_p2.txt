@@ -1,0 +1,8 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e04_p2.c
+$ ./prog < inputs/e04_p2.txt
+请输入非递减有序的La 的元素,输入-1 结束:
+请输入非递减有序的Lb 的元素,输入-1 结束:
+顺序表已经合并
+当前顺序表中的元素为:
+1 2 3 4 5 6 7 8 

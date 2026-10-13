@@ -1,0 +1,29 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e19_bt2.c
+$ ./prog < inputs/e19_bt2.txt
+插入文件 file1.txt 后的B 树:
+Level 0: (1001,file1.txt) 
+
+插入文件 file3.txt 后的B 树:
+Level 0: (1001,file1.txt) (1003,file3.txt) 
+
+插入文件 file2.txt 后的B 树:
+Level 0: (1001,file1.txt) (1002,file2.txt) (1003,file3.txt) 
+
+插入文件 file5.txt 后的B 树:
+Level 0: (1002,file2.txt) 
+Level 1: (1001,file1.txt) 
+Level 1: (1003,file3.txt) (1005,file5.txt) 
+
+插入文件 file4.txt 后的B 树:
+Level 0: (1002,file2.txt) 
+Level 1: (1001,file1.txt) 
+Level 1: (1003,file3.txt) (1004,file4.txt) (1005,file5.txt) 
+
+插入文件 file6.txt 后的B 树:
+Level 0: (1002,file2.txt) (1004,file4.txt) 
+Level 1: (1001,file1.txt) 
+Level 1: (1003,file3.txt) 
+Level 1: (1005,file5.txt) (1006,file6.txt) 
+
+找到文件: inode=1004, 名称=file4.txt, 大小=8192

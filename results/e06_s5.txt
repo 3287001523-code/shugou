@@ -1,0 +1,7 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e06_s5.c
+$ ./prog < inputs/e06_s5.txt
+请输入一串正整数(以0结束):
+依次删除的最小结点为:
+1 2 3 5 8 9 
+共删除了6个结点，链表已空。

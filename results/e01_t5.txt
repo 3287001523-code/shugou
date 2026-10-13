@@ -1,0 +1,4 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e01_t5.c
+$ ./prog < inputs/e01_t5.txt
+请输入10 个整数: 逆序输出: 10 9 8 7 6 5 4 3 2 1 

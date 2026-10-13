@@ -1,0 +1,7 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e12_s3.c
+$ ./prog < inputs/e12_s3.txt
+请按前序次序输入二叉树(空结点用#表示):
+非递归前序遍历:A B D E C F 
+非递归中序遍历:D B E A C F 
+非递归后序遍历:D E B F C A 

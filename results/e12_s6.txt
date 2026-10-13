@@ -1,0 +1,5 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e12_s6.c
+$ ./prog < inputs/e12_s6.txt
+请按前序次序输入二叉树(空结点用#表示):
+层次遍历序列为:A B C D E F 

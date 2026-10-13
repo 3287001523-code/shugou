@@ -1,0 +1,6 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e06_s4.c
+$ ./prog < inputs/e06_s4.txt
+请输入链表元素(以0结束):
+逆置前的链表为:1 2 3 4 5 
+逆置后的链表为:5 4 3 2 1 

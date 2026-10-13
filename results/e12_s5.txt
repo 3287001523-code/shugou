@@ -1,0 +1,6 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e12_s5.c
+$ ./prog < inputs/e12_s5.txt
+请按前序次序输入二叉树(空结点用#表示):
+交换前前序序列为:A B D E C F 
+交换后前序序列为:A C F B E D 

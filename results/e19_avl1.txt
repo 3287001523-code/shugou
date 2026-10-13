@@ -1,0 +1,5 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e19_avl1.c
+$ ./prog < inputs/e19_avl1.txt
+AVL 树中序遍历结果: 10 20 25 30 40 50 
+请输入要查找的元素: 元素 40 找到

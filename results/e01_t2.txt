@@ -1,0 +1,8 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e01_t2.c
+$ ./prog < inputs/e01_t2.txt
+请输入两个整数: 和: 8
+差: -2
+积: 15
+商: 0.60
+余数: 3

@@ -1,0 +1,6 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e01_t1.c
+$ ./prog < inputs/e01_t1.txt
+姓名: 张三
+学号: 20230001
+开发环境测试成功!

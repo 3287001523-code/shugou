@@ -1,0 +1,6 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e06_s6.c
+$ ./prog < inputs/e06_s6.txt
+请输入人数n和报数上限m(如 10 3):
+出圈顺序为:
+3 6 9 2 7 1 8 5 10 4

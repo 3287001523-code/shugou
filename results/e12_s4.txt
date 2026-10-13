@@ -1,0 +1,5 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e12_s4.c
+$ ./prog < inputs/e12_s4.txt
+请按完全二叉树顺序存储方式输入结点(以0结束):
+非递归前序遍历序列为:1 2 4 5 3 6 7 

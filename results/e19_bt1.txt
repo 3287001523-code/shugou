@@ -1,0 +1,73 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e19_bt1.c
+$ ./prog < inputs/e19_bt1.txt
+插入 10 后的B 树:
+Level 0: 10 
+
+插入 20 后的B 树:
+Level 0: 10 20 
+
+插入 5 后的B 树:
+Level 0: 5 10 20 
+
+插入 6 后的B 树:
+Level 0: 10 
+Level 1: 5 6 
+Level 1: 20 
+
+插入 12 后的B 树:
+Level 0: 10 
+Level 1: 5 6 
+Level 1: 12 20 
+
+插入 30 后的B 树:
+Level 0: 10 
+Level 1: 5 6 
+Level 1: 12 20 30 
+
+插入 7 后的B 树:
+Level 0: 10 
+Level 1: 5 6 7 
+Level 1: 12 20 30 
+
+插入 17 后的B 树:
+Level 0: 10 20 
+Level 1: 5 6 7 
+Level 1: 12 17 
+Level 1: 30 
+
+插入 3 后的B 树:
+Level 0: 6 10 20 
+Level 1: 3 5 
+Level 1: 7 
+Level 1: 12 17 
+Level 1: 30 
+
+插入 1 后的B 树:
+Level 0: 10 
+Level 1: 6 
+Level 2: 1 3 5 
+Level 2: 7 
+Level 1: 20 
+Level 2: 12 17 
+Level 2: 30 
+
+插入 8 后的B 树:
+Level 0: 10 
+Level 1: 6 
+Level 2: 1 3 5 
+Level 2: 7 8 
+Level 1: 20 
+Level 2: 12 17 
+Level 2: 30 
+
+插入 25 后的B 树:
+Level 0: 10 
+Level 1: 6 
+Level 2: 1 3 5 
+Level 2: 7 8 
+Level 1: 20 
+Level 2: 12 17 
+Level 2: 25 30 
+
+关键字 12 在节点中位置 0

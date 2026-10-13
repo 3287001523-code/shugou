@@ -1,0 +1,7 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e04_p1.c
+$ ./prog < inputs/e04_p1.txt
+input the number:input element:
+顺序表已经逆置
+当前顺序表中的元素为:
+5 4 3 2 1 

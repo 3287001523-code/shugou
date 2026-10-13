@@ -1,0 +1,7 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e12_s1.c
+$ ./prog < inputs/e12_s1.txt
+请输入前序序列(如 abdecf):
+请输入中序序列(如 dbaecf):
+建立的二叉树的前序序列为:A B D E C F 
+后序遍历序列为:D E B F C A 

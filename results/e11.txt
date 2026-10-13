@@ -1,0 +1,10 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e11.c
+$ ./prog < inputs/e11.txt
+请按先序次序输入二叉树结点(空结点用#表示):
+先序遍历序列为:A B D E C F 
+中序遍历序列为:D B E A C F 
+后序遍历序列为:D E B F C A 
+二叉树的深度为:3
+二叉树的结点数为:6
+清除后二叉树为空。

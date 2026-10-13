@@ -1,0 +1,4 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e01_t4.c
+$ ./prog < inputs/e01_t4.txt
+请输入一个整数: 7! = 5040

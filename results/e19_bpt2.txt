@@ -1,0 +1,9 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e19_bpt2.c
+$ ./prog < inputs/e19_bpt2.txt
+找到记录: ID: 1003, Name: Bob, Age: 30
+范围查询 [1002, 1005] 结果:
+ID: 1002, Name: Charlie, Age: 35
+ID: 1003, Name: Bob, Age: 30
+ID: 1004, Name: Eve, Age: 32
+ID: 1005, Name: David, Age: 28

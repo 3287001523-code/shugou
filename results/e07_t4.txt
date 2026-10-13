@@ -1,0 +1,12 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e07_t4.c
+$ ./prog < inputs/e07_t4.txt
+请输入要打印的杨辉三角行数: 杨辉三角前8 行:
+                        1
+                     1   1
+                  1   2   1
+               1   3   3   1
+            1   4   6   4   1
+         1   5  10  10   5   1
+      1   6  15  20  15   6   1
+   1   7  21  35  35  21   7   1

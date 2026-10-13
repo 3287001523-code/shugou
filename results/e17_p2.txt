@@ -1,0 +1,50 @@
+# GitHub Actions 云端运行 · 运行编号 1 · ubuntu-latest
+$ gcc -w -o prog code/e17_p2.c
+$ ./prog < inputs/e17_p2.txt
+请输入要插入到哈希表中的关键字,以0 结束:
+所建立的哈希表长为20,哈希函数为H(key)=key%13
+所建立的哈希表为:
+
+ 0--> NULL
+ 1--> 40--> 1--> 27--> 14--> NULL
+ 2--> NULL
+ 3--> NULL
+ 4--> NULL
+ 5--> NULL
+ 6--> NULL
+ 7--> 33--> NULL
+ 8--> NULL
+ 9--> NULL
+ 10--> NULL
+ 11--> NULL
+ 12--> NULL
+ 13--> NULL
+ 14--> NULL
+ 15--> NULL
+ 16--> NULL
+ 17--> NULL
+ 18--> NULL
+ 19--> NULL
+请输入要删除的关键字:
+删除成功后的哈希表为:
+
+ 0--> NULL
+ 1--> 40--> 1--> 14--> NULL
+ 2--> NULL
+ 3--> NULL
+ 4--> NULL
+ 5--> NULL
+ 6--> NULL
+ 7--> 33--> NULL
+ 8--> NULL
+ 9--> NULL
+ 10--> NULL
+ 11--> NULL
+ 12--> NULL
+ 13--> NULL
+ 14--> NULL
+ 15--> NULL
+ 16--> NULL
+ 17--> NULL
+ 18--> NULL
+ 19--> NULL
